@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <div>Header</div>
-  )
+    <header>
+      <Link to="/">Fast React Pizza Co.</Link>
+      <p>Abdul Rehman</p>
+    </header>
+  );
 }
