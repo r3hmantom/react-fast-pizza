@@ -5,7 +5,7 @@ import { createOrder } from "../../services/apiRestaurant";
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str) =>
   /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(
-    str
+    str,
   );
 
 const fakeCart = [
@@ -43,40 +43,40 @@ function CreateOrder() {
     <div>
       <h2>Ready to order? Let's go!</h2>
 
-      <Form method='POST'>
+      <Form method="POST">
         <div>
           <label>First Name</label>
-          <input type='text' name='customer' required />
+          <input type="text" name="customer" required />
         </div>
 
         <div>
           <label>Phone number</label>
           <div>
-            <input type='tel' name='phone' required />
-            {formErrors?.phone ? formErrors.phone : null};
+            <input type="tel" name="phone" required />
+            {formErrors?.phone ? formErrors.phone : null}
           </div>
         </div>
 
         <div>
           <label>Address</label>
           <div>
-            <input type='text' name='address' required />
+            <input type="text" name="address" required />
           </div>
         </div>
 
         <div>
           <input
-            type='checkbox'
-            name='priority'
-            id='priority'
+            type="checkbox"
+            name="priority"
+            id="priority"
             // value={withPriority}
             // onChange={(e) => setWithPriority(e.target.checked)}
           />
-          <label htmlFor='priority'>Want to yo give your order priority?</label>
+          <label htmlFor="priority">Want to yo give your order priority?</label>
         </div>
 
         <div>
-          <input type='hidden' value={JSON.stringify(cart)} name='cart' />
+          <input type="hidden" value={JSON.stringify(cart)} name="cart" />
           <button disabled={isSubmitting}>
             {isSubmitting ? "Placing order..." : "Order now"}
           </button>
