@@ -3,7 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Home, Error } from "./ui";
 import { Menu, loader as menuLoader } from "./features/menu/";
 import { Cart } from "./features/cart";
-import { CreateOrder, Order, loader as orderLoader } from "./features/order";
+import { CreateOrder, Order, loader as orderLoader, action as createOrderAction } from "./features/order";
 import AppLayout from "./ui/AppLayout";
 
 const router = createBrowserRouter([
@@ -28,6 +28,7 @@ const router = createBrowserRouter([
       {
         path: "/order/new",
         element: <CreateOrder />,
+        action: createOrderAction
       },
       {
         path: "/order/:orderId",
