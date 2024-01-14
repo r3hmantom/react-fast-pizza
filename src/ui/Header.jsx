@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { SearchOrder } from "../features/order";
-import UserName from "../features/user/UserName";
+import Username from "../features/user/Username";
 
 export default function Header() {
   return (
@@ -10,7 +10,7 @@ export default function Header() {
         Fast React Pizza Co.
       </Link>
       <SearchOrder />
-      <UserName />
+      <Username />
     </header>
   );
 }
