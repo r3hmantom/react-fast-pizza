@@ -29,11 +29,11 @@ function Order() {
 
         <div className="space-x-2">
           {priority && (
-            <span className="bg-red-500 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-red-50">
+            <span className="rounded-full bg-red-500 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-red-50">
               Priority
             </span>
           )}
-          <span className="bg-green-500 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-green-50">
+          <span className="rounded-full bg-green-500 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-green-50">
             {status} order
           </span>
         </div>
