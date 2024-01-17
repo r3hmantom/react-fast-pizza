@@ -17,6 +17,8 @@ const userSlice = createSlice({
 export default userSlice.reducer;
 export const { updateName } = userSlice.actions;
 
+export const getUsername = (state) => state.user.username;
+
 // function getPosition() {
 //   return new Promise(function (resolve, reject) {
 //     navigator.geolocation.getCurrentPosition(resolve, reject);
