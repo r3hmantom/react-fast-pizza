@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import Button from "../../ui/Button";
 import { useFetcher } from "react-router-dom";
 import { updateOrder } from "../../services/apiRestaurant";
@@ -6,10 +6,9 @@ import { updateOrder } from "../../services/apiRestaurant";
 export default function UpdateOrder({ order }) {
   const fetcher = useFetcher();
 
-  useEffect(() => {}, [fetcher]);
   return (
     <fetcher.Form method="PATCH" className="text-right"> 
-      <Button type="primary">Update Order</Button>
+      <Button type="primary">Make it priority</Button>
     </fetcher.Form>
   );
 }
